@@ -1,7 +1,14 @@
-{{jsonObject
-  embeds=(jsonArray (jsonObject
-    title=player.name
-    url=(concatenate "https://www.battlemetrics.com/players/" player.id)
-    description=msg.body
-  ))
-}}
+{
+  "content": null,
+  "embeds": [
+    {
+      "title": "!admin {{server.name}}",
+      "description": "**Message:** {{msg.body}}\n\n**Name:** {{player.name}} **Level:** {{player.level}}\n**Team**: {{player.team}} **Unit**: {{player.unit}} **Role**: {{player.role}} **Load** {{player.loadout}} **K** {{player.kills}} **D** {{player.deaths}} **Score** {{player.score}}\n**IP** {{player.ip}}\n***Family Share:** {{player.steam.familyShare}}\n**Time Played (Steam):** {{player.steam.timePlayed}}\n**Account Age:** {{player.steam.accountAge}} Days\n**Games on Steam:** {{player.steam.gameCount}}\n**VAC Bans:**  {{player.steam.VACBanCount}}\n**Game Bans:** {{player.steam.gameBans}}\n*",
+      "color": 16711680,
+      "author": {
+        "name": "Profile Link",
+        "url": "https://steamcommunity.com/profiles/{{player.steamID}}"
+      }
+    }
+  ]
+}
